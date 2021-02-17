@@ -2,3 +2,12 @@
   max-width: 1080px;
   margin: auto;
 }
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterLabel {
+  margin-right: 20px;
+}

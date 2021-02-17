@@ -13,30 +13,36 @@ function UserRow({ picture, firstName, lastName, email }) {
   );
 }
 
-export function UserTable({ users, sortDesc }) {
-  const sortedUsers = users.sort((a, b) => {
-    if (a.lastName > b.lastName) {
-      return sortDesc ? 1 : -1;
-    }
+export function UserTable({ users, sortDesc, filter }) {
+  const sortedUsers = users
+    .filter((user) => user.email.startsWith(filter))
+    .sort((a, b) => {
+      if (a.lastName > b.lastName) {
+        return sortDesc ? 1 : -1;
+      }
 
-    if (a.lastName < b.lastName) {
-      return sortDesc ? -1 : 1;
-    }
+      if (a.lastName < b.lastName) {
+        return sortDesc ? -1 : 1;
+      }
 
-    return 0;
-  });
+      return 0;
+    });
 
   return (
     <table className="table">
-      <tr>
-        <th></th>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Email</th>
-      </tr>
-      {sortedUsers.map((user) => (
-        <UserRow {...user} />
-      ))}
+      <thead>
+        <tr>
+          <th></th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {sortedUsers.map((user) => (
+          <UserRow key={user.id} {...user} />
+        ))}
+      </tbody>
     </table>
   );
 }
