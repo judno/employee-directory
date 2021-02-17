@@ -1,0 +1,14 @@
+.table {
+  width: 100%;
+}
+
+.table th {
+  text-align: left;
+}
+
+.table tr {
+}
+
+.picture {
+  border-radius: 50%;
+}

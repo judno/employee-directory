@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import data from "./data.json";
+import { UserTable } from "./UserTable";
+
+function TableHeader({ sortDesc, onSortDescChange }) {
+  return (
+    <div>
+      <select
+        value={sortDesc}
+        onChange={(event) => {
+          onSortDescChange(event.target.value === "true");
+        }}
+      >
+        <option value={false}>Ascending</option>
+        <option value={true}>Descending</option>
+      </select>
+    </div>
+  );
+}
 
 function App() {
+  const users = data.data;
+  const [sortDesc, setSortDesc] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="content">
+      <TableHeader sortDesc={sortDesc} onSortDescChange={setSortDesc} />
+      <UserTable sortDesc={sortDesc} users={users} />
     </div>
   );
 }
