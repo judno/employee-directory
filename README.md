@@ -1,7 +1,7 @@
 # Employee Directory
 
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ 
 ## Description
 
 An App that gives you the ability to view your entire employee directory at once and have quick access to their information.
@@ -21,4 +21,4 @@ or Search by email adress.
 
 ## Deployed App
 
-[Employee Directory]()
+[Employee Directory](https://judno.github.io/employee-directory/)
