@@ -13,7 +13,7 @@ You will be able to sort your employees:
 
 Alphabetically, by asecending or descending.
 
-or Search by email adress.
+or Search by email.
 
 ## Github
 
