@@ -22,3 +22,8 @@ or Search by email adress.
 ## Deployed App
 
 [Employee Directory](https://judno.github.io/employee-directory/)
+
+## Screenshot
+
+<img width="900" alt="directory screenshot" src="https://user-images.githubusercontent.com/69154965/108622266-adcb7380-748b-11eb-9658-d39cfb3a00da.png">
+
